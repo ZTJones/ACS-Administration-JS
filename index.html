@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <label>User Name</label>
+    <input type="text" id="user_name">
+    <label>VOIP</label>
+    <input type="checkbox" id="voip_check" checked>
+    <label>PSTN</label>
+    <input type="checkbox" id="pstn_check">
+    <label>Chat</label>
+    <input type="checkbox" id="chat_check">
+    <br><br>
+    <button name="create_button" id="create_button">Create User</button><br><br>
+    <button id="get_users">Get all Users</button> <br>
+    <table>
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>User ID</th>
+                <th>User Token</th>
+                <th>VOIP</th>
+                <th>PSTN</th>
+                <th>CHAT</th>
+                <th>Refresh</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            <tr>
+                <td>Example Name</td>
+                <td>Example ID</td>
+                <td>Example Token</td>
+                <td>True</td>
+                <td>False</td>
+                <td>False</td>
+                <td><button class="refresh_button">Refresh</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
